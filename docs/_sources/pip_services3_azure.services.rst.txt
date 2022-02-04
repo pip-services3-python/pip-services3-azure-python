@@ -1,0 +1,21 @@
+pip\_services3\_azure.services package
+======================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_azure.services.AzureFunctionAction
+   pip_services3_azure.services.AzureFunctionService
+   pip_services3_azure.services.CommandableAzureFunctionService
+   pip_services3_azure.services.IAzureFunctionService
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_azure.services
+   :members:
+   :undoc-members:
+   :show-inheritance:

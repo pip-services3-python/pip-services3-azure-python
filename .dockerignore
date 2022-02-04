@@ -1,0 +1,12 @@
+/.vscode
+/.git
+/.gitignore
+/.dockerignore
+/docs
+/pip_services3_azure.egg-info
+/dist
+/docker/Dockerfile*
+/docker/docker-compose*.yml
+/*.sh
+/*.ps1
+/.github

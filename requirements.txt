@@ -1,0 +1,6 @@
+pytest
+azure-functions >= 1.8.0, < 2.0.0
+pip_services3_commons >= 3.3.11, < 4.0.0 
+pip_services3_components >= 3.5.7, < 4.0.0
+pip_services3_container >= 3.2.5, < 4.0.0
+pip_services3_rpc >= 3.3.1, < 4.0.0
