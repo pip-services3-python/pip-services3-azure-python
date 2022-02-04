@@ -40,13 +40,13 @@ class CommandableAzureFunctionService(AzureFunctionService):
                 )
 
 
-            service = MyCommandableAzureFunctionService()
-            service.set_references(References.fromTuples(
-                Descriptor("mygroup", "controller", "default", "default", "1.0"), controller
-            ))
+        service = MyCommandableAzureFunctionService()
+        service.set_references(References.fromTuples(
+            Descriptor("mygroup", "controller", "default", "default", "1.0"), controller
+        ))
 
-            service.open("123")
-            print("The Azure Function service is running")
+        service.open("123")
+        print("The Azure Function service is running")
 
     """
 

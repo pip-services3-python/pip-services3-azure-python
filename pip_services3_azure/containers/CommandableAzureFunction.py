@@ -11,6 +11,34 @@ from .AzureFunctionContextHelper import AzureFunctionContextHelper
 
 
 class CommandableAzureFunction(AzureFunction):
+    """
+    Abstract Azure Function function, that acts as a container to instantiate and run components
+    and expose them via external entry point. All actions are automatically generated for commands
+    defined in :class:`ICommandable <pip_services3_commons.commands.ICommandable.ICommandable>`. Each command is exposed as an action defined by "cmd" parameter.
+    
+    Container configuration for this Azure Function is stored in `"./config/config.yml"` file.
+    But this path can be overridden by `CONFIG_PATH` environment variable.
+    
+    Note: This component has been deprecated. Use Azure FunctionService instead.
+    
+    ### References ###
+        - `*:logger:*:*:1.0`:            (optional) :class:`ILogger <pip_services3_components.log.ILogger.ILogger>`  components to pass log messages
+        - `*:counters:*:*:1.0`:          (optional) :class:`ICounters <pip_services3_components.count.ICounters.ICounters>`  components to pass collected measurements
+        - `*:service:azure-function:*:1.0`: (optional) :class:`IAzureFunctionService <pip_services3_azure.services.IAzureFunctionService.IAzureFunctionService>` services to handle action requests
+        - `*:service:commandable-azure-function:*:1.0`: (optional) :class:`IAzureFunctionService <pip_services3_azure.services.IAzureFunctionService.IAzureFunctionService>` services to handle action requests
+
+    Example:
+
+    .. code-block:: python
+        class MyAzureFunctionFunction(CommandableAzureFunction):
+            def __init__(self):
+                super().__init__("mygroup", "MyGroup AzureFunction")
+                self._dependency_resolver.put("controller", Descriptor("mygroup", "controller", "*", "*", "1.0"))
+                
+        azure_function = MyAzureFunctionFunction()
+        service.run()
+        print("MyAzureFunction is started")
+    """
 
     def __init__(self, name: Optional[str], description: Optional[str]):
         """

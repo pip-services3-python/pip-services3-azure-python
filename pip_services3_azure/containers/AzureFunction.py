@@ -35,7 +35,7 @@ class AzureFunction(Container):
         - `*:logger:*:*:1.0`            (optional) :class:`ILogger <pip_services3_components.log.ILogger.ILogger>`  components to pass log messages
         - `*:counters:*:*:1.0`          (optional) :class:`ICounters <pip_services3_components.count.ICounters.ICounters>`  components to pass collected measurements
         - `*:ervice:azure-function:*:*:1.0`        (optional) :class:`IAzureFunctionService <pip_services3_azure.services.IAzureFunctionService.IAzureFunctionService>` services to handle action requests
-        - *:service:commandable-azure-function:*:*:1.0   (optional) :class:`IAzureFunctionService <pip_services3_azure.services.IAzureFunctionService.IAzureFunctionService>` services to handle action requests
+        - `*:service:commandable-azure-function:*:*:1.0`   (optional) :class:`IAzureFunctionService <pip_services3_azure.services.IAzureFunctionService.IAzureFunctionService>` services to handle action requests
 
     Example:
 
