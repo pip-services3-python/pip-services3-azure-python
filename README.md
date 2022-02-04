@@ -2,9 +2,7 @@
 
 This module is a part of the [Pip.Services](http://pip.services.org) polyglot microservices toolkit.
 
-It provides a set of basic patterns used in microservices or backend services.
-Also the module implemenets a reasonably thin abstraction layer over most fundamental functions across
-all languages supported by the toolkit to facilitate symmetric implementation.
+Contains packages used to create containers and services that do operations via the Azure Function protocol.
 
 The module contains the following packages:
 - **Clients** - client components for working with Azure cloud Functions.
