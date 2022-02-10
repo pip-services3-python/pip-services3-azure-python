@@ -24,7 +24,7 @@ class DummyCommandableAzureFunctionClient(CommandableAzureFunctionClient, IDummy
     def get_dummy_by_id(self, correlation_id: Optional[str], id: str) -> Optional[Dummy]:
         response = self.call_command('get_dummy_by_id', correlation_id, {'dummy_id': id})
 
-        if response is None:
+        if not response:
             return None
 
         return Dummy(**response)

@@ -19,20 +19,14 @@ class AzureConnectionResolver(IConfigurable, IReferenceable):
 
     ### Configuration parameters ###
         - connections:
-           - discovery_key:               (optional) a key to retrieve the connection from :class:`IDiscovery <pip_services3_components.connect.IDiscovery.IDiscovery>`
-           - region:                      (optional) Azure region
-           - partition:                   (optional) Azure partition
-           - service:                     (optional) Azure service
-           - resource_type:               (optional) Azure resource type
-           - resource:                    (optional) Azure resource id
-           - arn:                         (optional) Azure resource ARN
+            - uri:           full connection uri with specific app and function name
+            - protocol:      connection protocol
+            - app_name:      alternative app name
+            - function_name: application function name
         - credentials:
-           - store_key:                   (optional) a key to retrieve the credentials from :class:`ICredentialStore <pip_services3_components.auth.ICredentialStore.ICredentialStore>`
-           - access_id:                   AWS access/client id
-           - access_key:                  AWS access/client id
+            - auth_code:     authorization code or null if using custom auth
 
     ### References ###
-        - `*:discovery:*:*:1.0`        (optional) :class:`IDiscovery <pip_services3_components.connect.IDiscovery.IDiscovery>` services to resolve connection
         - *:credential-store:*:*:1.0   (optional) Credential stores to resolve credentials
 
     See :class:`ConnectionParams <pip_services3_components.connect.ConnectionParams.ConnectionParams>` (in the Pip.Services components package),

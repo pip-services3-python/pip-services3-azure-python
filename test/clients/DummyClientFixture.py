@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from pip_services3_commons.convert import JsonConverter
 from pip_services3_commons.data import FilterParams, PagingParams
 
 from test.Dummy import Dummy
@@ -53,6 +52,6 @@ class DummyClientFixture:
         self._client.delete__dummy(None, dummy1.id)
 
         # Try to get delete dummy
-        # dummy = self._client.get_dummy_by_id(None, dummy1.id)
-        #
-        # assert dummy is None
+        dummy = self._client.get_dummy_by_id(None, dummy1.id)
+
+        assert dummy is None

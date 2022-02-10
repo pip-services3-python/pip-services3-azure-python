@@ -17,11 +17,13 @@ class AzureConnectionParams(ConfigParams):
 
     ### Configuration parameters ###
 
-        - uri:           full connection uri with specific app and function name
-        - protocol:      connection protocol
-        - app_name:      alternative app name
-        - function_name: application function name
-        - auth_code:     authorization code or null if using custom auth
+        - connections:
+            - uri:           full connection uri with specific app and function name
+            - protocol:      connection protocol
+            - app_name:      alternative app name
+            - function_name: application function name
+        - credentials:
+            - auth_code:     authorization code or null if using custom auth
 
     In addition to standard parameters :class:`CredentialParams <pip_services3_components.auth.CredentialParams.CredentialParams>` may contain any number of custom parameters
 
