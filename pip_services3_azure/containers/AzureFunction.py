@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import json
 import os
 import signal
 import sys
@@ -74,7 +75,7 @@ class AzureFunction(Container):
         self._schemas: Dict[str, Schema] = {}
 
         # The map of registered actions.
-        self._actions: Dict[str, Any] = {}
+        self._actions: Dict[str, Callable] = {}
 
         # The default path to config file.
         self._config_path: str = './config/config.yml'
@@ -212,15 +213,20 @@ class AzureFunction(Container):
             raise UnknownException(None, 'DUPLICATED_ACTION', f"{cmd} action already exists")
 
         # Hack!!! Wrapping action to preserve prototyping context
-        def action_curl(context: func.HttpRequest):
+        def action_curl(context: func.HttpRequest) -> func.HttpResponse:
             # Perform validation
             if schema:
+                params = {'body': {} if not context.get_body() else context.get_json()}
+                params.update(context.route_params)
+                params.update(context.params)
+
                 correlation_id = self._get_correlation_id(context)
-                err = schema.validate_and_return_exception(correlation_id,
-                                                           {} if not context.get_body() else context.get_json(),
-                                                           False)
+                err = schema.validate_and_return_exception(correlation_id, params, False)
                 if err is not None:
-                    raise err
+                    return func.HttpResponse(
+                        body=json.dumps(err.to_json()),
+                        status_code=err.status
+                    )
 
             # Todo: perform verification?
             return action(context)
@@ -247,7 +253,7 @@ class AzureFunction(Container):
         """
         return AzureFunctionContextHelper.get_command(context)
 
-    def _execute(self, context: func.HttpRequest) -> Any:
+    def _execute(self, context: func.HttpRequest) -> func.HttpResponse:
         """
         Executes this Azure Function and returns the result.
         This method can be overloaded in child classes
@@ -283,11 +289,11 @@ class AzureFunction(Container):
         self.run()
         return self._execute(context)
 
-    def get_handler(self) -> Callable[[func.HttpRequest], Any]:
+    def get_handler(self) -> Callable[[func.HttpRequest], func.HttpResponse]:
         # Return plugin function
         return lambda context: self.__handler(context)
 
-    def act(self, context: func.HttpRequest) -> Any:
+    def act(self, context: func.HttpRequest) -> func.HttpResponse:
         """
         Calls registered action in this Azure Function.
         "cmd" parameter in the action parameters determin

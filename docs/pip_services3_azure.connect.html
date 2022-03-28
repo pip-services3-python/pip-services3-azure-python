@@ -4,16 +4,17 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pip_services3_azure.connect package &mdash; pip-services3-commons  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>pip_services3_azure.connect package &mdash; pip-services3-azure  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pip-services3-commons
+            <a href="index.html" class="icon icon-home"> pip-services3-azure
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,7 +60,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pip-services3-commons</a>
+          <a href="index.html">pip-services3-azure</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -93,8 +94,8 @@
 <section id="module-pip_services3_azure.connect">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pip_services3_azure.connect" title="Permalink to this headline"></a></h2>
 <dl class="py class">
-<dt id="pip_services3_azure.connect.AzureConnectionParams">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.connect.</code><code class="sig-name descname">AzureConnectionParams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.connect.</span></span><span class="sig-name descname"><span class="pre">AzureConnectionParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.config.ConfigParams.ConfigParams</span></code></a></p>
 <p>Contains connection parameters to authenticate against Azure Functions
 and connect to specific Azure Function.</p>
@@ -102,19 +103,31 @@ and connect to specific Azure Function.</p>
 <p>### Configuration parameters ###</p>
 <blockquote>
 <div><ul class="simple">
+<li><dl class="simple">
+<dt>connections:</dt><dd><ul>
 <li><p>uri:           full connection uri with specific app and function name</p></li>
 <li><p>protocol:      connection protocol</p></li>
 <li><p>app_name:      alternative app name</p></li>
 <li><p>function_name: application function name</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>credentials:</dt><dd><ul>
 <li><p>auth_code:     authorization code or null if using custom auth</p></li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div></blockquote>
 <p>In addition to standard parameters <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.auth.CredentialParams.html#pip_services3_components.auth.CredentialParams.CredentialParams" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CredentialParams</span></code></a> may contain any number of custom parameters</p>
 <p>See <a class="reference internal" href="pip_services3_azure.connect.AzureConnectionResolver.html#pip_services3_azure.connect.AzureConnectionResolver.AzureConnectionResolver" title="pip_services3_azure.connect.AzureConnectionResolver.AzureConnectionResolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">AzureConnectionResolver</span></code></a></p>
 <p>Example:</p>
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.from_config">
-<em class="property">static </em><code class="sig-name descname">from_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)">pip_services3_commons.config.ConfigParams.ConfigParams</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</a><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.from_config" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.from_config">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.config.ConfigParams.ConfigParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams"><span class="pre">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</span></a></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.from_config" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves AzureConnectionParams from configuration parameters.
 The values are retrieves from “connection” and “credential” sections.</p>
 <dl class="field-list simple">
@@ -128,8 +141,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.from_string">
-<em class="property">static </em><code class="sig-name descname">from_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">line</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</a><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.from_string" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.from_string">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams"><span class="pre">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</span></a></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.from_string" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a new AzureConnectionParams object filled with key-value pairs serialized as a string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -143,8 +156,8 @@ Example: “Key1=123;Key2=ABC;Key3=2016-09-16T00:00:00.00Z”</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.from_tuples">
-<em class="property">static </em><code class="sig-name descname">from_tuples</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">tuples</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</a><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.from_tuples" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.from_tuples">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_tuples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tuples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams"><span class="pre">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</span></a></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.from_tuples" title="Permalink to this definition"></a></dt>
 <dd><p>Creates a new ConfigParams object filled with provided key-args pairs called tuples.
 Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</p>
 <dl class="field-list simple">
@@ -158,8 +171,8 @@ Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.get_app_name">
-<code class="sig-name descname">get_app_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_app_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.get_app_name">
+<span class="sig-name descname"><span class="pre">get_app_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_app_name" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the Azure app name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -169,8 +182,8 @@ Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.get_auth_code">
-<code class="sig-name descname">get_auth_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_auth_code" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.get_auth_code">
+<span class="sig-name descname"><span class="pre">get_auth_code</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_auth_code" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the Azure auth code.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -180,8 +193,8 @@ Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.get_function_name">
-<code class="sig-name descname">get_function_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_function_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.get_function_name">
+<span class="sig-name descname"><span class="pre">get_function_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_function_name" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the Azure function name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -191,8 +204,8 @@ Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.get_function_uri">
-<code class="sig-name descname">get_function_uri</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_function_uri" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.get_function_uri">
+<span class="sig-name descname"><span class="pre">get_function_uri</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_function_uri" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the Azure function uri.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -202,8 +215,8 @@ Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.get_protocol">
-<code class="sig-name descname">get_protocol</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_protocol" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.get_protocol">
+<span class="sig-name descname"><span class="pre">get_protocol</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.get_protocol" title="Permalink to this definition"></a></dt>
 <dd><p>Gets the Azure function connection protocol.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -213,8 +226,8 @@ Tuples parameters contain a sequence of key1, value1, key2, value2, … pairs.</
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.merge_configs">
-<em class="property">static </em><code class="sig-name descname">merge_configs</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">configs</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)">pip_services3_commons.config.ConfigParams.ConfigParams</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</a><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.merge_configs" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.merge_configs">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">merge_configs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">configs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.config.ConfigParams.ConfigParams</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams"><span class="pre">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</span></a></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.merge_configs" title="Permalink to this definition"></a></dt>
 <dd><p>Retrieves AzureConnectionParams from multiple configuration parameters.
 The values are retrieves from “connection” and “credential” sections.</p>
 <dl class="field-list simple">
@@ -228,8 +241,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.set_app_name">
-<code class="sig-name descname">set_app_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_app_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.set_app_name">
+<span class="sig-name descname"><span class="pre">set_app_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_app_name" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the Azure app name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -239,8 +252,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.set_auth_code">
-<code class="sig-name descname">set_auth_code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_auth_code" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.set_auth_code">
+<span class="sig-name descname"><span class="pre">set_auth_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_auth_code" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the Azure auth code.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -250,8 +263,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.set_function_name">
-<code class="sig-name descname">set_function_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_function_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.set_function_name">
+<span class="sig-name descname"><span class="pre">set_function_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_function_name" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the Azure function name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,8 +274,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.set_function_uri">
-<code class="sig-name descname">set_function_uri</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_function_uri" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.set_function_uri">
+<span class="sig-name descname"><span class="pre">set_function_uri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_function_uri" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the Azure function uri.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -272,8 +285,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.set_protocol">
-<code class="sig-name descname">set_protocol</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_protocol" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.set_protocol">
+<span class="sig-name descname"><span class="pre">set_protocol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.set_protocol" title="Permalink to this definition"></a></dt>
 <dd><p>Sets the Azure function connection protocol.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -283,8 +296,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionParams.validate">
-<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.validate" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionParams.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correlation_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionParams.validate" title="Permalink to this definition"></a></dt>
 <dd><p>Validates this connection parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -296,8 +309,8 @@ The values are retrieves from “connection” and “credential” sections.</p
 </dd></dl>
 
 <dl class="py class">
-<dt id="pip_services3_azure.connect.AzureConnectionResolver">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.connect.</code><code class="sig-name descname">AzureConnectionResolver</code><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionResolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.connect.</span></span><span class="sig-name descname"><span class="pre">AzureConnectionResolver</span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.IConfigurable.html#pip_services3_commons.config.IConfigurable.IConfigurable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.config.IConfigurable.IConfigurable</span></code></a>, <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferenceable.html#pip_services3_commons.refer.IReferenceable.IReferenceable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.refer.IReferenceable.IReferenceable</span></code></a></p>
 <p>Helper class to retrieve Azure connection and credential parameters,
 validate them and compose a AzureConnectionParams value.</p>
@@ -305,22 +318,17 @@ validate them and compose a AzureConnectionParams value.</p>
 <dt>### Configuration parameters ###</dt><dd><ul class="simple">
 <li><dl class="simple">
 <dt>connections:</dt><dd><ul>
-<li><p>discovery_key:               (optional) a key to retrieve the connection from <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.connect.IDiscovery.html#pip_services3_components.connect.IDiscovery.IDiscovery" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code></a></p></li>
-<li><p>region:                      (optional) Azure region</p></li>
-<li><p>partition:                   (optional) Azure partition</p></li>
-<li><p>service:                     (optional) Azure service</p></li>
-<li><p>resource_type:               (optional) Azure resource type</p></li>
-<li><p>resource:                    (optional) Azure resource id</p></li>
-<li><p>arn:                         (optional) Azure resource ARN</p></li>
+<li><p>uri:           full connection uri with specific app and function name</p></li>
+<li><p>protocol:      connection protocol</p></li>
+<li><p>app_name:      alternative app name</p></li>
+<li><p>function_name: application function name</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
 <dt>credentials:</dt><dd><ul>
-<li><p>store_key:                   (optional) a key to retrieve the credentials from <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.auth.ICredentialStore.html#pip_services3_components.auth.ICredentialStore.ICredentialStore" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ICredentialStore</span></code></a></p></li>
-<li><p>access_id:                   AWS access/client id</p></li>
-<li><p>access_key:                  AWS access/client id</p></li>
+<li><p>auth_code:     authorization code or null if using custom auth</p></li>
 </ul>
 </dd>
 </dl>
@@ -328,7 +336,6 @@ validate them and compose a AzureConnectionParams value.</p>
 </ul>
 </dd>
 <dt>### References ###</dt><dd><ul class="simple">
-<li><p><cite>*:discovery:*:*:1.0</cite>        (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.connect.IDiscovery.html#pip_services3_components.connect.IDiscovery.IDiscovery" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code></a> services to resolve connection</p></li>
 <li><p><em>:credential-store:</em>:<a href="#id1"><span class="problematic" id="id2">*</span></a>:1.0   (optional) Credential stores to resolve credentials</p></li>
 </ul>
 </dd>
@@ -350,8 +357,8 @@ validate them and compose a AzureConnectionParams value.</p>
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionResolver.configure">
-<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)">pip_services3_commons.config.ConfigParams.ConfigParams</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver.configure" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionResolver.configure">
+<span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.config.ConfigParams.ConfigParams</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver.configure" title="Permalink to this definition"></a></dt>
 <dd><p>Configures component by passing configuration parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -361,8 +368,8 @@ validate them and compose a AzureConnectionParams value.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionResolver.resolve">
-<code class="sig-name descname">resolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</a><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver.resolve" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionResolver.resolve">
+<span class="sig-name descname"><span class="pre">resolve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correlation_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pip_services3_azure.connect.AzureConnectionParams.html#pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams" title="pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams"><span class="pre">pip_services3_azure.connect.AzureConnectionParams.AzureConnectionParams</span></a></span></span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver.resolve" title="Permalink to this definition"></a></dt>
 <dd><p>Resolves connection and credential parameters and generates a single
 AzureConnectionParams value.</p>
 <dl class="field-list simple">
@@ -376,8 +383,8 @@ AzureConnectionParams value.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.connect.AzureConnectionResolver.set_references">
-<code class="sig-name descname">set_references</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">references</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferences.html#pip_services3_commons.refer.IReferences.IReferences" title="(in pip-services3-commons)">pip_services3_commons.refer.IReferences.IReferences</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver.set_references" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.connect.AzureConnectionResolver.set_references">
+<span class="sig-name descname"><span class="pre">set_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferences.html#pip_services3_commons.refer.IReferences.IReferences" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.refer.IReferences.IReferences</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.connect.AzureConnectionResolver.set_references" title="Permalink to this definition"></a></dt>
 <dd><p>Sets references to dependent components.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -402,7 +409,7 @@ AzureConnectionParams value.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Sergey Seroukhov.</p>
+    <p>&#169; Copyright 2022, Sergey Seroukhov.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -7,7 +7,7 @@ from pip_services3_commons.validate import Schema
 
 class AzureFunctionAction:
 
-    def __init__(self, cmd: str, schema: Schema, action: Callable[[func.HttpRequest], Any]):
+    def __init__(self, cmd: str, schema: Schema, action: Callable[[func.HttpRequest], func.HttpResponse]):
         # Command to call the action
         self.cmd = cmd
         # Schema to validate action parameters
@@ -15,7 +15,7 @@ class AzureFunctionAction:
 
         self.action = action if action else self.action
 
-    def action(self, context: func.HttpRequest) -> Any:
+    def action(self, context: func.HttpRequest) -> func.HttpResponse:
         """
         Action to be executed
 

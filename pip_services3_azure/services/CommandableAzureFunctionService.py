@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import azure.functions as func
 from pip_services3_commons.commands import ICommandable, CommandSet, ICommand
+from pip_services3_commons.convert import JsonConverter
 from pip_services3_commons.run import Parameters
 
 from .AzureFunctionService import AzureFunctionService
@@ -96,6 +97,10 @@ class CommandableAzureFunctionService(AzureFunctionService):
                         return command.execute(correlation_id, args)
                     except Exception as e:
                         timing.end_failure(e)
+                        return func.HttpResponse(
+                            body=JsonConverter.to_json(e),
+                            status_code=400
+                        )
                     finally:
                         timing.end_timing()
 

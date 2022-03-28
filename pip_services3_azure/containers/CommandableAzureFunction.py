@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+import json
 from typing import Optional
 
 import azure.functions as func
 from pip_services3_commons.commands import CommandSet, ICommandable, ICommand
+from pip_services3_commons.convert import JsonConverter
 from pip_services3_commons.run import Parameters
 from pip_services3_rpc.services import InstrumentTiming
 
@@ -78,8 +80,13 @@ class CommandableAzureFunction(AzureFunction):
                         timing.end_timing()
                         return result
                     except Exception as e:
-                        timing.end_timing(e)
-                        raise e
+                        timing.end_failure(e)
+                        return func.HttpResponse(
+                            body=JsonConverter.to_json(e),
+                            status_code=400
+                        )
+                    finally:
+                        timing.end_timing()
 
                 return action
 

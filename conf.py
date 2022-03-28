@@ -19,8 +19,8 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'pip-services3-commons'
-copyright = '2020, Sergey Seroukhov'
+project = 'pip-services3-azure'
+copyright = '2022, Sergey Seroukhov'
 author = 'Sergey Seroukhov'
 
 

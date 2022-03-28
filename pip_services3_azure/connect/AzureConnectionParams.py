@@ -162,7 +162,7 @@ class AzureConnectionParams(ConfigParams):
             raise ConfigException(
                 correlation_id,
                 "NO_CONNECTION_URI",
-                "No uri, app_name and function_name is configured in Auzre function uri"
+                "No uri, app_name and function_name is configured in Azure function uri"
             )
 
         if protocol and 'http' != protocol and 'https' != protocol:
@@ -171,12 +171,12 @@ class AzureConnectionParams(ConfigParams):
                 "WRONG_PROTOCOL", "Protocol is not supported by REST connection"
             ).with_details("protocol", protocol)
 
-        if self.get_auth_code() is None:
-            raise ConfigException(
-                correlation_id,
-                "NO_ACCESS_KEY",
-                "No access_key is configured in AWS credential"
-            )
+        # if self.get_auth_code() is None:
+        #     raise ConfigException(
+        #         correlation_id,
+        #         "NO_ACCESS_KEY",
+        #         "No access_key is configured in Azure credential"
+        #     )
 
     @staticmethod
     def from_config(config: ConfigParams) -> 'AzureConnectionParams':

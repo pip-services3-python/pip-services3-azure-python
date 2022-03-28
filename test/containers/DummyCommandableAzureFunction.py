@@ -7,7 +7,7 @@ from test.DummyFactory import DummyFactory
 
 class DummyCommandableAzureFunction(CommandableAzureFunction):
     def __init__(self):
-        super(DummyCommandableAzureFunction, self).__init__("dummy", "Dummy lambda function")
+        super(DummyCommandableAzureFunction, self).__init__("dummy", "Dummy Azure function")
         self._dependency_resolver.put('controller',
                                       Descriptor('pip-services-dummies', 'controller', 'default', '*', '*'))
         self._factories.add(DummyFactory())

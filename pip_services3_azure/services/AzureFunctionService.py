@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import json
 from abc import abstractmethod
 from typing import Optional, List, Any, Callable
 
@@ -179,19 +180,24 @@ class AzureFunctionService(IAzureFunctionService, IOpenable, IConfigurable, IRef
         self.__actions = []
         self.__interceptors = []
 
-    def _apply_validation(self, schema: Schema, action: Callable[[func.HttpRequest], Any]) -> Callable[
-        [func.HttpRequest], Any]:
+    def _apply_validation(self, schema: Schema, action: Callable[[func.HttpRequest], func.HttpResponse]) -> Callable[
+        [func.HttpRequest], func.HttpResponse]:
         # Create an action function
-        def action_wrapper(context: func.HttpRequest):
+        def action_wrapper(context: func.HttpRequest) -> func.HttpResponse:
             # Validate object
             if schema and context:
                 # Perform validation
+                params = {'body': {} if not context.get_body() else context.get_json()}
+                params.update(context.route_params)
+                params.update(context.params)
+
                 correlation_id = self._get_correlation_id(context)
-                err = schema.validate_and_return_exception(correlation_id,
-                                                           {} if not context.get_body() else context.get_json(),
-                                                           False)
-                if err:
-                    raise err
+                err = schema.validate_and_return_exception(correlation_id, params, False)
+                if err is not None:
+                    return func.HttpResponse(
+                        body=json.dumps(err.to_json()),
+                        status_code=err.status
+                    )
 
             result = action(context)
             return result
@@ -216,7 +222,7 @@ class AzureFunctionService(IAzureFunctionService, IOpenable, IConfigurable, IRef
             cmd = self.__name + '.' + cmd
         return cmd
 
-    def _register_action(self, name: str, schema: Schema, action: Callable[[func.HttpRequest], Any]):
+    def _register_action(self, name: str, schema: Schema, action: Callable[[func.HttpRequest], func.HttpResponse]):
         """
         Registers a action in Azure Function function.
 
@@ -234,7 +240,7 @@ class AzureFunctionService(IAzureFunctionService, IOpenable, IConfigurable, IRef
 
     def _register_action_with_auth(self, name: str, schema: Schema,
                                    authorize: Callable[[func.HttpRequest, Callable[[func.HttpRequest], Any]], Any],
-                                   action: Callable[[func.HttpRequest], Any]):
+                                   action: Callable[[func.HttpRequest], func.HttpResponse]):
         """
         Registers an action with authorization.
 
@@ -292,7 +298,7 @@ class AzureFunctionService(IAzureFunctionService, IOpenable, IConfigurable, IRef
         """
         return AzureFunctionContextHelper.get_command(context)
 
-    def act(self, context: func.HttpRequest) -> Any:
+    def act(self, context: func.HttpRequest) -> func.HttpResponse:
         """
         Calls registered action in this Azure Function.
         "cmd" parameter in the action parameters determine
@@ -322,4 +328,3 @@ class AzureFunctionService(IAzureFunctionService, IOpenable, IConfigurable, IRef
             ).with_details('command', cmd)
 
         return action.action(context)
-

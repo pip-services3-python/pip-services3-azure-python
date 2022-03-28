@@ -4,16 +4,17 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pip_services3_azure.clients.CommandableAzureFunctionClient module &mdash; pip-services3-commons  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>pip_services3_azure.clients.CommandableAzureFunctionClient module &mdash; pip-services3-azure  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pip-services3-commons
+            <a href="index.html" class="icon icon-home"> pip-services3-azure
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,7 +60,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pip-services3-commons</a>
+          <a href="index.html">pip-services3-azure</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -83,8 +84,8 @@
   <section id="module-pip_services3_azure.clients.CommandableAzureFunctionClient">
 <span id="pip-services3-azure-clients-commandableazurefunctionclient-module"></span><h1>pip_services3_azure.clients.CommandableAzureFunctionClient module<a class="headerlink" href="#module-pip_services3_azure.clients.CommandableAzureFunctionClient" title="Permalink to this headline"></a></h1>
 <dl class="py class">
-<dt id="pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.clients.CommandableAzureFunctionClient.</code><code class="sig-name descname">CommandableAzureFunctionClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.clients.CommandableAzureFunctionClient.</span></span><span class="sig-name descname"><span class="pre">CommandableAzureFunctionClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pip_services3_azure.clients.AzureFunctionClient.html#pip_services3_azure.clients.AzureFunctionClient.AzureFunctionClient" title="pip_services3_azure.clients.AzureFunctionClient.AzureFunctionClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_azure.clients.AzureFunctionClient.AzureFunctionClient</span></code></a></p>
 <p>Abstract client that calls commandable Azure Functions.</p>
 <p>Commandable services are generated automatically for
@@ -115,7 +116,7 @@ Each command is exposed as action determined by “cmd” parameter.</p>
 <li><p><cite>*:logger:*:*:1.0</cite>            (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.log.ILogger.html#pip_services3_components.log.ILogger.ILogger" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code></a>  components to pass log messages</p></li>
 <li><p><cite>*:counters:*:*:1.0</cite>          (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.count.ICounters.html#pip_services3_components.count.ICounters.ICounters" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code></a>  components to pass collected measurements</p></li>
 <li><p><cite>*:discovery:*:*:1.0</cite>        (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.connect.IDiscovery.html#pip_services3_components.connect.IDiscovery.IDiscovery" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code></a> services to resolve connection</p></li>
-<li><p><em>:credential-store:</em>:<a href="#id1"><span class="problematic" id="id2">*</span></a>:1.0   (optional) Credential stores to resolve credentials</p></li>
+<li><p><cite>*:credential-store:*:*:1.0</cite>   (optional) Credential stores to resolve credentials</p></li>
 </ul>
 </dd>
 </dl>
@@ -140,8 +141,8 @@ Each command is exposed as action determined by “cmd” parameter.</p>
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient.call_command">
-<code class="sig-name descname">call_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a></span></em>, <em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">params</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)">dict</a></span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient.call_command" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient.call_command">
+<span class="sig-name descname"><span class="pre">call_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">correlation_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.10)"><span class="pre">dict</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.10)"><span class="pre">Any</span></a></span></span><a class="headerlink" href="#pip_services3_azure.clients.CommandableAzureFunctionClient.CommandableAzureFunctionClient.call_command" title="Permalink to this definition"></a></dt>
 <dd><p>Calls a remote action in Azure Function.
 The name of the action is added as “cmd” parameter
 to the action parameters.</p>
@@ -174,7 +175,7 @@ to the action parameters.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Sergey Seroukhov.</p>
+    <p>&#169; Copyright 2022, Sergey Seroukhov.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

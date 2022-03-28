@@ -42,7 +42,7 @@ class AzureFunctionClient(IOpenable, IConfigurable, IReferenceable):
         - `*:logger:*:*:1.0`            (optional) :class:`ILogger <pip_services3_components.log.ILogger.ILogger>`  components to pass log messages
         - `*:counters:*:*:1.0`          (optional) :class:`ICounters <pip_services3_components.count.ICounters.ICounters>`  components to pass collected measurements
         - `*:discovery:*:*:1.0`        (optional) :class:`IDiscovery <pip_services3_components.connect.IDiscovery.IDiscovery>` services to resolve connection
-        - *:credential-store:*:*:1.0   (optional) Credential stores to resolve credentials
+        - `*:credential-store:*:*:1.0`   (optional) Credential stores to resolve credentials
 
     See :class:`AzureFunction <pip_services3_azure.containers.AzureFunction.AzureFunction>` (in the Pip.Services components package),
     :class:`CommandableAzureClient <pip_services3_azure.clients.CommandableAzureClient.CommandableAzureClient>` (in the Pip.Services components package)
@@ -107,7 +107,7 @@ class AzureFunctionClient(IOpenable, IConfigurable, IReferenceable):
         :param config: configuration parameters to be set.
         """
         self._connection_resolver.configure(config)
-        self._connection_resolver.configure(config)
+        self._dependency_resolver.configure(config)
 
         self._connection_timeout = config.get_as_integer_with_default('options.connect_timeout',
                                                                       self._connection_timeout)

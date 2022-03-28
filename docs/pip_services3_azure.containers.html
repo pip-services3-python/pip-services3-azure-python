@@ -4,16 +4,17 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pip_services3_azure.containers package &mdash; pip-services3-commons  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>pip_services3_azure.containers package &mdash; pip-services3-azure  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pip-services3-commons
+            <a href="index.html" class="icon icon-home"> pip-services3-azure
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,7 +60,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pip-services3-commons</a>
+          <a href="index.html">pip-services3-azure</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -94,8 +95,8 @@
 <section id="module-pip_services3_azure.containers">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pip_services3_azure.containers" title="Permalink to this headline"></a></h2>
 <dl class="py class">
-<dt id="pip_services3_azure.containers.AzureFunction">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.containers.</code><code class="sig-name descname">AzureFunction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.containers.</span></span><span class="sig-name descname"><span class="pre">AzureFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-container-python/pip_services3_container.Container.html#pip_services3_container.Container.Container" title="(in pip-services3-container)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_container.Container.Container</span></code></a></p>
 <p>Abstract Azure Function, that acts as a container to instantiate and run components
 and expose them via external entry point.</p>
@@ -114,8 +115,8 @@ But this path can be overriden by <cite>CONFIG_PATH</cite> environment variable.
 </dl>
 <p>Example:</p>
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunction.act">
-<code class="sig-name descname">act</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.act" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction.act">
+<span class="sig-name descname"><span class="pre">act</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">azure.functions._http.HttpResponse</span></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.act" title="Permalink to this definition"></a></dt>
 <dd><p>Calls registered action in this Azure Function.
 “cmd” parameter in the action parameters determin
 what action shall be called.</p>
@@ -131,13 +132,13 @@ what action shall be called.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunction.get_handler">
-<code class="sig-name descname">get_handler</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Callable<span class="p">[</span><span class="p">[</span>azure.functions._http.HttpRequest<span class="p">]</span><span class="p">, </span>Any<span class="p">]</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.get_handler" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction.get_handler">
+<span class="sig-name descname"><span class="pre">get_handler</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.10)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">azure.functions._http.HttpRequest</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">azure.functions._http.HttpResponse</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.get_handler" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunction.open">
-<code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.open" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correlation_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.open" title="Permalink to this definition"></a></dt>
 <dd><p>Opens the component.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -147,23 +148,23 @@ what action shall be called.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunction.register">
-<code class="sig-name descname">register</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.register" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.register" title="Permalink to this definition"></a></dt>
 <dd><p>Registers all actions in this Azure Function.</p>
 <p>Note: Overloading of this method has been deprecated. Use AzureFunctionService instead.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunction.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.run" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.run" title="Permalink to this definition"></a></dt>
 <dd><p>Runs this Azure Function, loads container configuration,
 instantiate components and manage their lifecycle,
 makes this function ready to access action calls.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunction.set_references">
-<code class="sig-name descname">set_references</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">references</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferences.html#pip_services3_commons.refer.IReferences.IReferences" title="(in pip-services3-commons)">pip_services3_commons.refer.IReferences.IReferences</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.set_references" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunction.set_references">
+<span class="sig-name descname"><span class="pre">set_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferences.html#pip_services3_commons.refer.IReferences.IReferences" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.refer.IReferences.IReferences</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunction.set_references" title="Permalink to this definition"></a></dt>
 <dd><p>Sets references to dependent components.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -175,12 +176,12 @@ makes this function ready to access action calls.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.containers.</code><code class="sig-name descname">AzureFunctionContextHelper</code><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.containers.</span></span><span class="sig-name descname"><span class="pre">AzureFunctionContextHelper</span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.get_command">
-<em class="property">static </em><code class="sig-name descname">get_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.get_command" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.get_command">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.get_command" title="Permalink to this definition"></a></dt>
 <dd><p>Returns command from Azure Function context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -193,8 +194,8 @@ makes this function ready to access action calls.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.get_correlation_id">
-<em class="property">static </em><code class="sig-name descname">get_correlation_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.get_correlation_id" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.get_correlation_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_correlation_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.get_correlation_id" title="Permalink to this definition"></a></dt>
 <dd><p>Returns correlationId from Azure Function context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -207,8 +208,8 @@ makes this function ready to access action calls.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.get_parameters">
-<em class="property">static </em><code class="sig-name descname">get_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.Parameters.html#pip_services3_commons.run.Parameters.Parameters" title="(in pip-services3-commons)">pip_services3_commons.run.Parameters.Parameters</a><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.get_parameters" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.get_parameters">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.Parameters.html#pip_services3_commons.run.Parameters.Parameters" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.run.Parameters.Parameters</span></a></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.get_parameters" title="Permalink to this definition"></a></dt>
 <dd><p>Returns body from Azure Function context http request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -223,8 +224,8 @@ makes this function ready to access action calls.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="pip_services3_azure.containers.CommandableAzureFunction">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.containers.</code><code class="sig-name descname">CommandableAzureFunction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><span class="p">, </span><a class="reference external" href="http://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)">None</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.CommandableAzureFunction" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.CommandableAzureFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.containers.</span></span><span class="sig-name descname"><span class="pre">CommandableAzureFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="http://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.10)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.CommandableAzureFunction" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="pip_services3_azure.containers.AzureFunction.html#pip_services3_azure.containers.AzureFunction.AzureFunction" title="pip_services3_azure.containers.AzureFunction.AzureFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_azure.containers.AzureFunction.AzureFunction</span></code></a></p>
 <p>Abstract Azure Function function, that acts as a container to instantiate and run components
 and expose them via external entry point. All actions are automatically generated for commands
@@ -243,8 +244,8 @@ But this path can be overridden by <cite>CONFIG_PATH</cite> environment variable
 </dl>
 <p>Example:</p>
 <dl class="py method">
-<dt id="pip_services3_azure.containers.CommandableAzureFunction.register">
-<code class="sig-name descname">register</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.CommandableAzureFunction.register" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.CommandableAzureFunction.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_azure.containers.CommandableAzureFunction.register" title="Permalink to this definition"></a></dt>
 <dd><p>Registers all actions in this Azure Function.</p>
 </dd></dl>
 
@@ -264,7 +265,7 @@ But this path can be overridden by <cite>CONFIG_PATH</cite> environment variable
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Sergey Seroukhov.</p>
+    <p>&#169; Copyright 2022, Sergey Seroukhov.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

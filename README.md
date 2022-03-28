@@ -2,7 +2,7 @@
 
 This module is a part of the [Pip.Services](http://pip.services.org) polyglot microservices toolkit.
 
-Contains packages used to create containers and services that do operations via the Azure Function protocol.
+Contains packages used to create containers and services that do operations via the Azure cloud.
 
 The module contains the following packages:
 - **Clients** - client components for working with Azure cloud Functions.
@@ -12,11 +12,11 @@ The module contains the following packages:
 
 <a name="links"></a> Quick links:
 
-* [Configuration Pattern](https://www.pipservices.org/recipies/configuration) 
+* [Configuration Pattern](http://docs.pipservices.org/toolkit/getting_started/configurations/) 
 * [API Reference](https://pip-services3-python.github.io/pip-services3-azure-python/index.html)
 * [Change Log](CHANGELOG.md)
-* [Get Help](https://www.pipservices.org/community/help)
-* [Contribute](https://www.pipservices.org/community/contribute)
+* [Get Help](http://docs.pipservices.org/get_help/)
+* [Contribute](http://docs.pipservices.org/toolkit/contribute/)
 
 ## Use
 

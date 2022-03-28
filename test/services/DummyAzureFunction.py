@@ -9,7 +9,7 @@ from test.DummyFactory import DummyFactory
 
 class DummyAzureFunction(AzureFunction):
     def __init__(self):
-        super().__init__("dummy", "Dummy lambda function")
+        super().__init__("dummy", "Dummy Azure function")
         self._factories.add(DummyFactory())
 
 

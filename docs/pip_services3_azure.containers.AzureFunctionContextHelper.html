@@ -4,16 +4,17 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pip_services3_azure.containers.AzureFunctionContextHelper module &mdash; pip-services3-commons  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>pip_services3_azure.containers.AzureFunctionContextHelper module &mdash; pip-services3-azure  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -26,7 +27,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> pip-services3-commons
+            <a href="index.html" class="icon icon-home"> pip-services3-azure
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,7 +60,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pip-services3-commons</a>
+          <a href="index.html">pip-services3-azure</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -83,12 +84,12 @@
   <section id="module-pip_services3_azure.containers.AzureFunctionContextHelper">
 <span id="pip-services3-azure-containers-azurefunctioncontexthelper-module"></span><h1>pip_services3_azure.containers.AzureFunctionContextHelper module<a class="headerlink" href="#module-pip_services3_azure.containers.AzureFunctionContextHelper" title="Permalink to this headline"></a></h1>
 <dl class="py class">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_azure.containers.AzureFunctionContextHelper.</code><code class="sig-name descname">AzureFunctionContextHelper</code><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pip_services3_azure.containers.AzureFunctionContextHelper.</span></span><span class="sig-name descname"><span class="pre">AzureFunctionContextHelper</span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_command">
-<em class="property">static </em><code class="sig-name descname">get_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_command" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_command">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_command" title="Permalink to this definition"></a></dt>
 <dd><p>Returns command from Azure Function context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -101,8 +102,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_correlation_id">
-<em class="property">static </em><code class="sig-name descname">get_correlation_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_correlation_id" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_correlation_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_correlation_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_correlation_id" title="Permalink to this definition"></a></dt>
 <dd><p>Returns correlationId from Azure Function context.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -115,8 +116,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_parameters">
-<em class="property">static </em><code class="sig-name descname">get_parameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">context</span><span class="p">:</span> <span class="n">azure.functions._http.HttpRequest</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.Parameters.html#pip_services3_commons.run.Parameters.Parameters" title="(in pip-services3-commons)">pip_services3_commons.run.Parameters.Parameters</a><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_parameters" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_parameters">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">azure.functions._http.HttpRequest</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.Parameters.html#pip_services3_commons.run.Parameters.Parameters" title="(in pip-services3-commons)"><span class="pre">pip_services3_commons.run.Parameters.Parameters</span></a></span></span><a class="headerlink" href="#pip_services3_azure.containers.AzureFunctionContextHelper.AzureFunctionContextHelper.get_parameters" title="Permalink to this definition"></a></dt>
 <dd><p>Returns body from Azure Function context http request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -143,7 +144,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Sergey Seroukhov.</p>
+    <p>&#169; Copyright 2022, Sergey Seroukhov.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

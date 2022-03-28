@@ -25,7 +25,7 @@ class CommandableAzureFunctionClient(AzureFunctionClient):
         - `*:logger:*:*:1.0`            (optional) :class:`ILogger <pip_services3_components.log.ILogger.ILogger>`  components to pass log messages
         - `*:counters:*:*:1.0`          (optional) :class:`ICounters <pip_services3_components.count.ICounters.ICounters>`  components to pass collected measurements
         - `*:discovery:*:*:1.0`        (optional) :class:`IDiscovery <pip_services3_components.connect.IDiscovery.IDiscovery>` services to resolve connection
-        - *:credential-store:*:*:1.0   (optional) Credential stores to resolve credentials
+        - `*:credential-store:*:*:1.0`   (optional) Credential stores to resolve credentials
 
     .. code-block:: python
 
@@ -76,5 +76,7 @@ class CommandableAzureFunctionClient(AzureFunctionClient):
             timing.end_timing()
             return result
         except Exception as err:
-            timing.end_timing(err)
-            raise err
+            timing.end_failure(err)
+            return err
+        finally:
+            timing.end_timing()
