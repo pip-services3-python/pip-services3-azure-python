@@ -92,7 +92,7 @@ class CommandableAzureFunctionService(AzureFunctionService):
                     if 'correlation_id' in args.keys():
                         args.remove('correlation_id')
 
-                    timing = self._instrument(correlation_id, name)
+                    timing = self._instrument(correlation_id, command.get_name())
                     try:
                         return command.execute(correlation_id, args)
                     except Exception as e:

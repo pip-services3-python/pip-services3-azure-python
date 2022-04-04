@@ -38,15 +38,15 @@ class DummyAzureFunctionFixture:
         req['body'] = JsonConverter.to_json(
             {
                 'cmd': 'create_dummy',
-                'dummy': self.DUMMY1
+                'dummy': self.DUMMY2
             }
         )
         response = self._function.act(func.http.HttpRequest(**req))
 
         dummy2 = Dummy(**json.loads(response.get_body()))
         assert dummy2 is not None
-        assert dummy2.content, self.DUMMY1.content
-        assert dummy2.key, self.DUMMY1.key
+        assert dummy2.content, self.DUMMY2.content
+        assert dummy2.key, self.DUMMY2.key
 
         # Update the dummy
         req['body'] = JsonConverter.to_json(
@@ -73,6 +73,17 @@ class DummyAzureFunctionFixture:
             }
         )
         self._function.act(func.http.HttpRequest(**req))
+
+        # Try to get deleted dummy
+        req['body'] = JsonConverter.to_json(
+            {
+                'cmd': 'get_dummy_by_id',
+                'dummy_id': dummy1.id
+            }
+        )
+        response = self._function.act(func.http.HttpRequest(**req))
+
+        assert response.get_body() == b''
 
         # Failed data test
         req['body'] = JsonConverter.to_json(
