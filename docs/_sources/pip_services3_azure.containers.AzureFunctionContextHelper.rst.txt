@@ -1,7 +1,0 @@
-pip\_services3\_azure.containers.AzureFunctionContextHelper module
-==================================================================
-
-.. automodule:: pip_services3_azure.containers.AzureFunctionContextHelper
-   :members:
-   :undoc-members:
-   :show-inheritance:

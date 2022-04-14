@@ -1,7 +1,0 @@
-pip\_services3\_azure.services.CommandableAzureFunctionService module
-=====================================================================
-
-.. automodule:: pip_services3_azure.services.CommandableAzureFunctionService
-   :members:
-   :undoc-members:
-   :show-inheritance:

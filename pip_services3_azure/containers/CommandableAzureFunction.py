@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 import json
-from typing import Optional
+from typing import Optional, Any
 
 import azure.functions as func
 from pip_services3_commons.commands import CommandSet, ICommandable, ICommand
 from pip_services3_commons.convert import JsonConverter
+from pip_services3_commons.data import DataPage
 from pip_services3_commons.run import Parameters
 from pip_services3_rpc.services import InstrumentTiming
 
@@ -77,7 +78,8 @@ class CommandableAzureFunction(AzureFunction):
 
                     try:
                         result = command.execute(correlation_id, args)
-                        timing.end_timing()
+                        # Conversion to response data format
+                        result = self.__to_response_format(result)
                         return result
                     except Exception as e:
                         timing.end_failure(e)
@@ -99,3 +101,18 @@ class CommandableAzureFunction(AzureFunction):
         controller: ICommandable = self._dependency_resolver.get_one_required('controller')
         command_set = controller.get_command_set()
         self.__register_command_set(command_set)
+
+    def __to_response_format(self, res: Any) -> func.HttpResponse:
+        if res is None:
+            return func.HttpResponse(status_code=204)
+        if not isinstance(res, (str, bytes, func.HttpResponse)):
+            if hasattr(res, 'to_dict'):
+                res = res.to_dict()
+            elif hasattr(res, 'to_json'):
+                if isinstance(res, DataPage) and len(res.data) > 0 and not isinstance(res.data[0], dict):
+                    res.data = json.loads(JsonConverter.to_json(res.data))
+                res = res.to_json()
+            else:
+                res = JsonConverter.to_json(res)
+
+        return func.HttpResponse(body=json.dumps(res))

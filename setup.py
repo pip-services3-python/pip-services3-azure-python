@@ -23,7 +23,7 @@ except:
 
 setup(
     name='pip_services3_azure',
-    version='3.0.1',
+    version='3.0.2',
     url='http://github.com/pip-services3-python/pip-services3-azure-python',
     license='MIT',
     description='',

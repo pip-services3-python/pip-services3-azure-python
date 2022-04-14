@@ -1,7 +1,0 @@
-pip\_services3\_azure.connect.AzureConnectionResolver module
-============================================================
-
-.. automodule:: pip_services3_azure.connect.AzureConnectionResolver
-   :members:
-   :undoc-members:
-   :show-inheritance:

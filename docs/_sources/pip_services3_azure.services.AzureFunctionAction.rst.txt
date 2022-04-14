@@ -1,7 +1,0 @@
-pip\_services3\_azure.services.AzureFunctionAction module
-=========================================================
-
-.. automodule:: pip_services3_azure.services.AzureFunctionAction
-   :members:
-   :undoc-members:
-   :show-inheritance:
