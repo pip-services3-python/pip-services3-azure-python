@@ -1,0 +1,7 @@
+pip\_services3\_azure.clients.AzureFunctionClient module
+========================================================
+
+.. automodule:: pip_services3_azure.clients.AzureFunctionClient
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -16,7 +16,7 @@ from pip_services3_components.count import CompositeCounters
 from pip_services3_components.log import CompositeLogger
 from pip_services3_components.trace import CompositeTracer
 from pip_services3_rpc.services import InstrumentTiming
-
+from pip_services3_commons.errors import ErrorDescription, ErrorCategory
 
 from ..connect.AzureConnectionParams import AzureConnectionParams
 from ..connect.AzureConnectionResolver import AzureConnectionResolver
@@ -223,9 +223,16 @@ class AzureFunctionClient(IOpenable, IConfigurable, IReferenceable):
         if response.status_code == 204:
             return
 
-        data = {} if not response.content else response.json()
+        data = None if not response.content else response.json()
 
         if response.status_code >= 400:
+            if data:
+                data = ErrorDescription.from_json(data)
+            else:
+                data = ErrorDescription()
+                data.code = response.status_code
+                data.message = response.reason
+                data.category = ErrorCategory.Unknown
             raise ApplicationExceptionFactory.create(data).with_cause(Exception(response.text))
 
         return data

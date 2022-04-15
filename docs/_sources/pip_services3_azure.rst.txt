@@ -1,0 +1,21 @@
+pip\_services3\_azure package
+=============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_azure.clients
+   pip_services3_azure.connect
+   pip_services3_azure.containers
+   pip_services3_azure.services
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_azure
+   :members:
+   :undoc-members:
+   :show-inheritance:
