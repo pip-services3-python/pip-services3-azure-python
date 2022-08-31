@@ -1,5 +1,5 @@
 {
-    "name":  "pip_services3_azure",
+    "name":  "pip-services3-azure",
     "type": "module",
     "language": "python",
     "version": "3.0.3",
